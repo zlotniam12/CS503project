@@ -41,6 +41,8 @@
     <b>Search for isolates resistant/susceptible to a particular drug: </b>
     <br><i>Input drug name abbreviation in the box below: </i></br>
     <form name="form" action="" method="post">
+    <input type= "checkbox" name="phenotype" value="1"/>panS <br/>
+    <input type= "checkbox" name="phenotype" value="2"/>mono <br/>
     <input type="text" name="drug_abrv" id="drug_abrv" value="">
     <button type="submit" name="submit">SUBMIT</button>
     </form>
