@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<!--The head element contains metadata about the html file-->
+	<head>
+		<!--Link External CSS-->
+		<link rel="stylesheet" href="CS503_page.css">
+		<meta charset="UTF-8">
+	</head>
+	
+	<!--Modify background color attribute-->
+	<body bgcolor="#FFFFFF">
+		<!--Tal's section-->
+		<div class="section" style="max-height: 400px; overflow-y:scroll; overflow-x: hidden" id="div1"> 
+			<h1><span style="color:purple"> Tal's Section </span></h1>
+			<p align="right-side">
+				<a href="https://en.wikipedia.org/wiki/Variant_Call_Format" target="_blank">More info on mutations</a>
+				<form method="POST" action="process.php" target="_blank" onsubmit="this.submit(); this.reset(); return false;">
+					<label for='formDrugResistance[]' ><i> Select the kind of drug resistance: </i></label><br>
+					<select name= 'Drug'>
+						<option value = ""> Select...</option>
+						<option value = "full_name"> full_name</option>
+						<option value = "drug_id"> drug_id</option>
+						<option value = "drug_abrv"> drug_abrv</option>
+					</select>
+				<input type= "submit" value = "Submit the form"/>
+				</form>
+			</p>
+			<img src="dog.jpg" height="150px" width="150px" border="1px" alt=""/>
+			<div style="clear:both"></div>
+		</div>
+		
+		<!--Alyssa's section-->
+		<div class="section" style="max-height: 400px; overflow-y:scroll; overflow-x: hidden" id="div2"> 
+			<h1><span style="color:purple">Alyssa's Section </span></h1>
+			<p align="right-side">
+				<a href="http://www.informit.com/articles/article.aspx?p=1731108&seqNum=4" target="_blank">Something cool to click on.</a>
+				<form name="form" method="POST" action="databasetest.php" target="_blank" onsubmit="this.submit(); this.reset(); return false;">
+					<b>Search for isolates resistant/susceptible to a particular drug: </b><br/>
+					<input type= "checkbox" name="phenotype" value="1"/>panS <br/>
+					<input type= "checkbox" name="phenotype" value="2"/>mono <br/>
+					<br><i>Input drug name abbreviation in the box below: </i></br>
+					<input type="text" name="drug_abrv" id="drug_abrv" value="">
+					<button type="submit" name="submit">SUBMIT</button>
+				</form>
+			</p>
+			<img src="dog.jpg" height="150px" width="150px" border="1px" alt=""/>
+		</div>
+		
+		<!--Norman's section-->
+		<div style="max-height: 400px; overflow-y:scroll; overflow-x: hidden" id="div3"> 
+			<Title> Mycobacterium Tuberculosis Variant Database </Title>
+			<h1><span style="color:blue"> Norman's Section </span></h1>
+			<p align="left-side">
+				<a href="http://www.espn.com/nba/team/_/name/lal/los-angeles-lakers" target="_blank">Something cool to click on.</a>
+				<form method="POST" action="process.php" target="_blank">
+					<label for='formDrugResistance[]' ><i> Select the kind of drug resistance: </i></label><br>
+					<select name= 'Drug'>
+						<option value = ""> Select...</option>
+						<option value = "full_name"> full_name</option>
+						<option value = "drug_id"> drug_id</option>
+						<option value = "drug_abrv"> drug_abrv</option>
+					</select>
+				<input type= "submit" value = "Submit the form"/>
+				</form>
+				<img src="dog.jpg" height="150px" width="150px" border="1px" alt=""/ align="right">
+			</p>
+		</div>
+		
+		<!--Kellie's section-->
+		<div style="max-height: 400px; overflow-y:scroll; overflow-x: hidden" id="div4"> 
+			<!--attributes such as style can be used to add css elements-->
+			<h1><span style="color:green"> Kellie's Section </span></h1>
+			<p align="left-side">
+				<a href="https://en.wikipedia.org/wiki/Variant_Call_Format" target="_blank"><font color="white">More info on mutations</font></a>
+				<!--The <form> element is used to collect information from the user-->
+				<!--The method attribute specifies the HTTP method (GET or POST) to be used when forms are submitted-->
+				<!--Setting method as GET will make the form data visible in the page address-->
+				<!--Use POST if the form is updating data or includes sensitive information; This has better security
+					since the submitted data is not visible in the page address-->
+				<form method="POST" action="databases_single_position.php" target="_blank" onsubmit="this.submit(); this.reset(); return false;">
+					<font color="white"><i>Input a single mutation position to search the database for:</i></font><br>
+					<input name="single_position" Placeholder="Single Position" type="text" required/><br/>
+					<input type="submit" value="Submit"/><br/>
+				</form>
+			</p>
+			<p>
+				<!--blank target will make the action occur in a separate window-->
+				<form method="POST" action="databases_position_range.php" target="_blank" onsubmit="this.submit(); this.reset(); return false;">
+					<font color="white"><i>Input a start and end range to search the database for:</i></font><br>
+					<!--required mark indicates to the web browser that both fields are mandatory-->
+					<input name="start_range" Placeholder="Start Range" type="text" required/><br/>
+					<input name="end_range" Placeholder="End Range" type="text" required/><br/>
+					<input type= "submit" value="Submit"/>
+				</form>
+				<img src="dog.jpg" height="150px" width="150px" border="1px" alt=""/ align="right">
+			</p>
+		</div>
+		
+		<div class="copyright" align="botttom">
+			&copy; 2017 Property of Alyssa Zlotnicki, Kellie Kim, Norman Kuo, and Tal Shmaya. All rights reserved.
+		</div>
+	</body>
+</html>

@@ -1,0 +1,101 @@
+variant_id	Chromosome	Position	Ref	Alt	Consequence	Impact	Gene_name	Gene	Feature_type	Fwature	Biotype	Exon	Intron	HGVSc	HGVSp	cDNA_position	CDS_position	Protein_position	Amino_acids	Codons	Existing_variation	Distance	Strand	Flag	Pick	Variant_class	Symbol_source	HGNC_ID	Mutation
+1	1	1977	A	G	upstream_gene_variant	MODIFIER	dnaN	Rv0002	Transcript	CCP42724	protein_coding											75	1			SNV	ENA_GENE		A-75G
+2	1	4013	T	C	missense_variant	MODERATE	recF	Rv0003	Transcript	CCP42725	protein_coding	1/1				734	734	245	I/T	aTc/aCc			1		1	SNV	ENA_GENE		I245T
+3	1	7362	G	C	missense_variant	MODERATE	gyrA	Rv0006	Transcript	CCP42728	protein_coding	1/1				61	61	21	E/Q	Gag/Cag			1		1	SNV	ENA_GENE		E21Q
+4	1	7581	G	A	missense_variant	MODERATE	gyrA	Rv0006	Transcript	CCP42728	protein_coding	1/1				280	280	94	D/N	Gac/Aac			1		1	SNV	ENA_GENE		D94N
+5	1	7585	G	C	missense_variant	MODERATE	gyrA	Rv0006	Transcript	CCP42728	protein_coding	1/1				284	284	95	S/T	aGc/aCc			1		1	SNV	ENA_GENE		S95T
+6	1	9304	G	A	missense_variant	MODERATE	gyrA	Rv0006	Transcript	CCP42728	protein_coding	1/1				2003	2003	668	G/D	gGc/gAc			1		1	SNV	ENA_GENE		G668D
+7	1	11878	GA	G	frameshift_variant	HIGH		Rv0008c	Transcript	CCP42730	protein_coding	1/1				433	433	145	S/X	Tcc/cc			-1		1	deletion			-A433
+8	1	14785	T	C	missense_variant	MODERATE		Rv0012	Transcript	CCP42734	protein_coding	1/1				697	697	233	C/R	Tgc/Cgc			1		1	SNV			C233R
+9	1	14785	T	C	upstream_gene_variant	MODIFIER	trpG	Rv0013	Transcript	CCP42735	protein_coding											129	1			SNV	ENA_GENE		T-129C
+10	1	14861	G	T	missense_variant	MODERATE		Rv0012	Transcript	CCP42734	protein_coding	1/1				773	773	258	G/V	gGc/gTc			1		1	SNV			G258V
+11	1	14861	G	T	upstream_gene_variant	MODIFIER	trpG	Rv0013	Transcript	CCP42735	protein_coding											53	1			SNV	ENA_GENE		G-53T
+12	1	15087	C	G	synonymous_variant	LOW	trpG	Rv0013	Transcript	CCP42735	protein_coding	1/1				174	174	58	T	acC/acG			1		1	SNV	ENA_GENE		T58
+13	1	15117	C	G	missense_variant	MODERATE	trpG	Rv0013	Transcript	CCP42735	protein_coding	1/1				204	204	68	I/M	atC/atG			1		1	SNV	ENA_GENE		I68M
+14	1	16119	C	A	missense_variant	MODERATE	pknB	Rv0014c	Transcript	CCP42736	protein_coding	1/1				1352	1352	451	R/L	cGc/cTc			-1		1	SNV	ENA_GENE		R451L
+15	1	21795	G	A	missense_variant	MODERATE	pstP	Rv0018c	Transcript	CCP42740	protein_coding	1/1				1387	1387	463	P/S	Ccg/Tcg			-1		1	SNV	ENA_GENE		P463S
+16	1	21795	G	A	upstream_gene_variant	MODIFIER	rodA	Rv0017c	Transcript	CCP42739	protein_coding											155	-1			SNV	ENA_GENE		G-155A
+17	1	24703	GTT	G	frameshift_variant	HIGH	fhaA	Rv0020c	Transcript	CCP42742	protein_coding	1/1				740-741	740-741	247	Q/X	cAA/c			-1		1	deletion	ENA_GENE		-TT740
+18	1	24714	TAAC	T	inframe_deletion	MODERATE	fhaA	Rv0020c	Transcript	CCP42742	protein_coding	1/1				728-730	728-730	243-244	GY/D	gGTTac/gac			-1		1	deletion	ENA_GENE		-AAC728
+19	1	24719	GCGTTGCT	G	frameshift_variant	HIGH	fhaA	Rv0020c	Transcript	CCP42742	protein_coding	1/1				719-725	719-725	240-242	EQR/X	gAGCAACGc/gc			-1		1	deletion	ENA_GENE		-CGTTGCT719
+20	1	24727	CGGGG	C	frameshift_variant	HIGH	fhaA	Rv0020c	Transcript	CCP42742	protein_coding	1/1				714-717	714-717	238-239	YP/X	taCCCC/ta			-1		1	deletion	ENA_GENE		-GGGG714
+21	1	24732	TA	T	frameshift_variant	HIGH	fhaA	Rv0020c	Transcript	CCP42742	protein_coding	1/1				712	712	238	Y/X	Tac/ac			-1		1	deletion	ENA_GENE		-A712
+22	1	25610	G	C	upstream_gene_variant	MODIFIER	leuT	EBG00000313373	Transcript	EBG00000313373-1	tRNA											34	1			SNV	ENA_GENE		G-34C
+23	1	25610	G	C	upstream_gene_variant	MODIFIER	fhaA	Rv0020c	Transcript	CCP42742	protein_coding											166	-1		1	SNV	ENA_GENE		G-166C
+24	1	26642	C	A	synonymous_variant	LOW		Rv0021c	Transcript	CCP42743	protein_coding	1/1				240	240	80	L	ctG/ctT			-1		1	SNV			L80
+25	1	26959	C	G	upstream_gene_variant	MODIFIER		Rv0021c	Transcript	CCP42743	protein_coding											78	-1			SNV			C-78G
+26	1	28366	AT	A	frameshift_variant	HIGH		Rv0024	Transcript	CCP42746	protein_coding	1/1				6	6	2	N/X	aaT/aa			1		1	deletion			-T6
+27	1	35608	C	T	synonymous_variant	LOW	bioF2	Rv0032	Transcript	CCP42754	protein_coding	1/1				1314	1314	438	A	gcC/gcT			1		1	SNV	ENA_GENE		A438
+28	1	36008	G	C	missense_variant	MODERATE	bioF2	Rv0032	Transcript	CCP42754	protein_coding	1/1				1714	1714	572	D/H	Gac/Cac			1		1	SNV	ENA_GENE		D572H
+29	1	37031	C	G	synonymous_variant	LOW		Rv0034	Transcript	CCP42756	protein_coding	1/1				165	165	55	A	gcC/gcG			1		1	SNV			A55
+30	1	37305	C	G	missense_variant	MODERATE	fadD34	Rv0035	Transcript	CCP42757	protein_coding	1/1				47	47	16	S/W	tCg/tGg			1		1	SNV	ENA_GENE		S16W
+31	1	37334	A	T	missense_variant	MODERATE	fadD34	Rv0035	Transcript	CCP42757	protein_coding	1/1				76	76	26	T/S	Act/Tct			1		1	SNV	ENA_GENE		T26S
+32	1	39158	C	G	synonymous_variant	LOW		Rv0036c	Transcript	CCP42758	protein_coding	1/1				672	672	224	R	cgG/cgC			-1		1	SNV			R224
+33	1	42280	GC	G	frameshift_variant	HIGH		Rv0039c	Transcript	CCP42761	protein_coding	1/1				71	71	24	C/X	tGc/tc			-1		1	deletion			-C71
+34	1	42967	G	C	synonymous_variant	LOW	mtc28	Rv0040c	Transcript	CCP42762	protein_coding	1/1				399	399	133	P	ccC/ccG			-1		1	SNV	ENA_GENE		P133
+35	1	43829	C	T	missense_variant	MODERATE	leuS	Rv0041	Transcript	CCP42763	protein_coding	1/1				268	268	90	P/S	Ccc/Tcc			1		1	SNV	ENA_GENE		P90S
+36	1	44768	A	G	missense_variant	MODERATE	leuS	Rv0041	Transcript	CCP42763	protein_coding	1/1				1207	1207	403	R/G	Agg/Ggg			1		1	SNV	ENA_GENE		R403G
+37	1	48503	T	C	synonymous_variant	LOW		Rv0044c	Transcript	CCP42766	protein_coding	1/1				525	525	175	R	cgA/cgG			-1		1	SNV			R175
+38	1	49360	C	T	missense_variant	MODERATE		Rv0045c	Transcript	CCP42767	protein_coding	1/1				580	580	194	V/I	Gtc/Atc			-1		1	SNV			V194I
+39	1	49690	GCCC	G	inframe_deletion	MODERATE		Rv0045c	Transcript	CCP42767	protein_coding	1/1				247-249	247-249	83	G/-	GGG/-			-1		1	deletion			-CCC247
+40	1	50556	CT	C	frameshift_variant	HIGH	ino1	Rv0046c	Transcript	CCP42768	protein_coding	1/1				568	568	190	R/X	Agg/gg			-1		1	deletion	ENA_GENE		-T568
+41	1	51949	A	G	missense_variant	MODERATE		Rv0048c	Transcript	CCP42770	protein_coding	1/1				749	749	250	V/A	gTc/gCc			-1		1	SNV			V250A
+42	1	54394	A	G	synonymous_variant	LOW	ponA1	Rv0050	Transcript	CCP42772	protein_coding	1/1				732	732	244	A	gcA/gcG			1		1	SNV	ENA_GENE		A244
+43	1	55555	G	GTC	frameshift_variant	HIGH	ponA1	Rv0050	Transcript	CCP42772	protein_coding	1/1				1893-1894	1893-1894	631-632	-/X	-/TC			1		1	insertion	ENA_GENE		+TC1893
+44	1	55555	G	GTC	upstream_gene_variant	MODIFIER		Rv0051	Transcript	CCP42773	protein_coding											140	1			insertion			G-140GTC
+45	1	62048	TA	T	frameshift_variant	HIGH	dnaB	Rv0058	Transcript	CCP42780	protein_coding	1/1				1654	1654	552	R/X	Agg/gg			1		1	deletion	ENA_GENE		-A1654
+46	1	63146	G	T	upstream_gene_variant	MODIFIER		Rv0059	Transcript	CCP42781	protein_coding											54	1			SNV			G-54T
+47	1	65150	C	T	stop_gained	HIGH		Rv0061c	Transcript	CCP42783	protein_coding	1/1				201	201	67	W/*	tgG/tgA			-1		1	SNV			W67*
+48	1	69338	G	T	missense_variant	MODERATE		Rv0064	Transcript	CCP42786	protein_coding	1/1				719	719	240	R/L	cGt/cTt			1		1	SNV			R240L
+49	1	69989	G	A	missense_variant	MODERATE		Rv0064	Transcript	CCP42786	protein_coding	1/1				1370	1370	457	G/D	gGt/gAt			1		1	SNV			G457D
+50	1	70267	G	T	missense_variant	MODERATE		Rv0064	Transcript	CCP42786	protein_coding	1/1				1648	1648	550	V/F	Gtc/Ttc			1		1	SNV			V550F
+51	1	70816	A	G	missense_variant	MODERATE		Rv0064	Transcript	CCP42786	protein_coding	1/1				2197	2197	733	N/D	Aac/Gac			1		1	SNV			N733D
+52	1	71582	C	CTGT	upstream_gene_variant	MODIFIER	vapB1	Rv0064A	Transcript	CCP42787	protein_coding											6	1			insertion	ENA_GENE		C-6CTGT
+53	1	71584	C	CTGG	upstream_gene_variant	MODIFIER	vapB1	Rv0064A	Transcript	CCP42787	protein_coding											4	1			insertion	ENA_GENE		C-4CTGG
+54	1	71589	A	ATC	frameshift_variant&start_lost	HIGH	vapB1	Rv0064A	Transcript	CCP42787	protein_coding	1/1				1-2	1-2	1	M/IX	atg/aTCtg			1		1	insertion	ENA_GENE		+TC1
+55	1	71591	G	GAC	frameshift_variant	HIGH	vapB1	Rv0064A	Transcript	CCP42787	protein_coding	1/1				3-4	3-4	1-2	-/X	-/AC			1		1	insertion	ENA_GENE		+AC3
+56	1	71596	C	CG	frameshift_variant	HIGH	vapB1	Rv0064A	Transcript	CCP42787	protein_coding	1/1				8-9	8-9	3	T/TX	acc/acGc			1		1	insertion	ENA_GENE		+G8
+57	1	75233	C	A	upstream_gene_variant	MODIFIER		Rv0067c	Transcript	CCP42790	protein_coding											35	-1			SNV			C-35A
+58	1	75233	C	A	upstream_gene_variant	MODIFIER		Rv0068	Transcript	CCP42791	protein_coding											68	1			SNV			C-68A
+59	1	75940	G	C	missense_variant	MODERATE		Rv0068	Transcript	CCP42791	protein_coding	1/1				640	640	214	V/L	Gtg/Ctg			1		1	SNV			V214L
+60	1	79480	T	C	upstream_gene_variant	MODIFIER		Rv0071	Transcript	CCP42794	protein_coding											6	1			SNV			T-6C
+61	1	87468	C	T	missense_variant	MODERATE		Rv0078A	Transcript	CCP42802	protein_coding	1/1				334	334	112	E/K	Gag/Aag			-1		1	SNV			E112K
+62	1	92199	T	G	synonymous_variant	LOW		Rv0083	Transcript	CCP42808	protein_coding	1/1				1800	1800	600	T	acT/acG			1		1	SNV			T600
+63	1	92199	T	G	upstream_gene_variant	MODIFIER	hycD	Rv0084	Transcript	CCP42809	protein_coding											129	1			SNV	ENA_GENE		T-129G
+64	1	94388	G	A	synonymous_variant	LOW	hycQ	Rv0086	Transcript	CCP42811	protein_coding	1/1				438	438	146	G	ggG/ggA			1		1	SNV	ENA_GENE		G146
+65	1	96105	AC	A	frameshift_variant	HIGH	hycE	Rv0087	Transcript	CCP42812	protein_coding	1/1				693	693	231	H/X	caC/ca			1		1	deletion	ENA_GENE		-C693
+66	1	96894	C	T	upstream_gene_variant	MODIFIER		Rv0088	Transcript	CCP42813	protein_coding											33	1			SNV			C-33T
+67	1	99162	TCGG	T	inframe_deletion	MODERATE		Rv0090	Transcript	CCP42815	protein_coding	1/1				684-686	684-686	228-229	FG/F	ttCGGt/ttt			1		1	deletion			-CGG684
+68	1	99166	TG	T	frameshift_variant	HIGH		Rv0090	Transcript	CCP42815	protein_coding	1/1				688	688	230	V/X	Gtg/tg			1		1	deletion			-G688
+69	1	99168	TG	T	frameshift_variant	HIGH		Rv0090	Transcript	CCP42815	protein_coding	1/1				690	690	230	V/X	gtG/gt			1		1	deletion			-G690
+70	1	99170	CGCGG	C	frameshift_variant	HIGH		Rv0090	Transcript	CCP42815	protein_coding	1/1				692-695	692-695	231-232	RG/X	cGCGGc/cc			1		1	deletion			-GCGG692
+71	1	101539	C	T	synonymous_variant	LOW	ctpA	Rv0092	Transcript	CCP42817	protein_coding	1/1				957	957	319	G	ggC/ggT			1		1	SNV	ENA_GENE		G319
+72	1	103743	G	GT	frameshift_variant	HIGH		Rv0094c	Transcript	CCP42819	protein_coding	1/1				920-921	920-921	307	L/LX	ctc/ctAc			-1		1	insertion			+T920
+73	1	103743	G	GT	upstream_gene_variant	MODIFIER		Rv0093c	Transcript	CCP42818	protein_coding											80	-1			insertion			G-80GT
+74	1	103746	G	C	missense_variant	MODERATE		Rv0094c	Transcript	CCP42819	protein_coding	1/1				918	918	306	F/L	ttC/ttG			-1		1	SNV			F306L
+75	1	103746	G	C	upstream_gene_variant	MODIFIER		Rv0093c	Transcript	CCP42818	protein_coding											83	-1			SNV			G-83C
+76	1	103756	G	T	missense_variant	MODERATE		Rv0094c	Transcript	CCP42819	protein_coding	1/1				908	908	303	P/H	cCc/cAc			-1		1	SNV			P303H
+77	1	103756	G	T	upstream_gene_variant	MODIFIER		Rv0093c	Transcript	CCP42818	protein_coding											93	-1			SNV			G-93T
+78	1	103893	C	G	synonymous_variant	LOW		Rv0094c	Transcript	CCP42819	protein_coding	1/1				771	771	257	L	ctG/ctC			-1		1	SNV			L257
+79	1	103896	C	G	missense_variant	MODERATE		Rv0094c	Transcript	CCP42819	protein_coding	1/1				768	768	256	E/D	gaG/gaC			-1		1	SNV			E256D
+80	1	104712	C	T	upstream_gene_variant	MODIFIER		Rv0094c	Transcript	CCP42819	protein_coding											49	-1			SNV			C-49T
+81	1	104767	C	T	upstream_gene_variant	MODIFIER		Rv0094c	Transcript	CCP42819	protein_coding											104	-1			SNV			C-104T
+82	1	104773	C	T	upstream_gene_variant	MODIFIER		Rv0094c	Transcript	CCP42819	protein_coding											110	-1			SNV			C-110T
+83	1	104775	A	G	upstream_gene_variant	MODIFIER		Rv0094c	Transcript	CCP42819	protein_coding											112	-1			SNV			A-112G
+84	1	104782	G	A	upstream_gene_variant	MODIFIER		Rv0094c	Transcript	CCP42819	protein_coding											119	-1			SNV			G-119A
+85	1	104785	A	G	upstream_gene_variant	MODIFIER		Rv0094c	Transcript	CCP42819	protein_coding											122	-1			SNV			A-122G
+86	1	104791	C	T	upstream_gene_variant	MODIFIER		Rv0094c	Transcript	CCP42819	protein_coding											128	-1			SNV			C-128T
+87	1	104794	C	T	upstream_gene_variant	MODIFIER		Rv0094c	Transcript	CCP42819	protein_coding											131	-1			SNV			C-131T
+88	1	104803	C	T	upstream_gene_variant	MODIFIER		Rv0094c	Transcript	CCP42819	protein_coding											140	-1			SNV			C-140T
+89	1	104807	A	AG	frameshift_variant	HIGH		Rv0095c	Transcript	CCP42820	protein_coding	1/1				408-409	408-409	136-137	-/X	-/C			-1		1	insertion			+G408
+90	1	104807	A	AG	upstream_gene_variant	MODIFIER		Rv0094c	Transcript	CCP42819	protein_coding											144	-1			insertion			A-144AG
+91	1	104808	A	ATC	frameshift_variant	HIGH		Rv0095c	Transcript	CCP42820	protein_coding	1/1				407-408	407-408	136	P/PX	cct/ccGAt			-1		1	insertion			+TC407
+92	1	104808	A	ATC	upstream_gene_variant	MODIFIER		Rv0094c	Transcript	CCP42819	protein_coding											145	-1			insertion			A-145ATC
+93	1	104811	CTT	C	frameshift_variant	HIGH		Rv0095c	Transcript	CCP42820	protein_coding	1/1				403-404	403-404	135	K/X	AAg/g			-1		1	deletion			-TT403
+94	1	104811	CTT	C	upstream_gene_variant	MODIFIER		Rv0094c	Transcript	CCP42819	protein_coding											149	-1			deletion			CTT-149C
+95	1	104817	T	G	missense_variant	MODERATE		Rv0095c	Transcript	CCP42820	protein_coding	1/1				399	399	133	E/D	gaA/gaC			-1		1	SNV			E133D
+96	1	104817	T	G	upstream_gene_variant	MODIFIER		Rv0094c	Transcript	CCP42819	protein_coding											154	-1			SNV			T-154G
+97	1	104824	C	A	missense_variant	MODERATE		Rv0095c	Transcript	CCP42820	protein_coding	1/1				392	392	131	S/I	aGc/aTc			-1		1	SNV			S131I
+98	1	104824	C	A	upstream_gene_variant	MODIFIER		Rv0094c	Transcript	CCP42819	protein_coding											161	-1			SNV			C-161A
+99	1	104830	C	A	missense_variant	MODERATE		Rv0095c	Transcript	CCP42820	protein_coding	1/1				386	386	129	R/L	cGa/cTa			-1		1	SNV			R129L
+100	1	104830	C	A	upstream_gene_variant	MODIFIER		Rv0094c	Transcript	CCP42819	protein_coding											167	-1			SNV			C-167A
