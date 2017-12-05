@@ -24,49 +24,16 @@
   </head>
 <body>
 <?php
-
-if (isset($_POST['drug_abrv']))
-{
-  if ($_POST['phenotype'] == "2")
-     {
-      $query = "SELECT isolate, R_S ";
-      $query .= "FROM resistance_profile R ";
-      $query .= "WHERE R.drug_id NOT IN (SELECT drug_id ";
+      $query = "SELECT drug_abrv, full_name ";
       $query .= "FROM DST ";
-      $query .= "WHERE DST.drug_abrv<>\"";
-      $query .= $_POST['drug_abrv'];
-      $query .= "\") GROUP BY R_S, isolate;";
-      }
-  elseif ($_POST['phenotype'] == "1")
-     {
-      $query = "SELECT isolate, R_S ";
-      $query .= "FROM resistance_profile R ";
-      $query .= "WHERE R.R_S = \"S\" "; 
-      $query .= "AND R.drug_id IN (SELECT drug_id ";
-      $query .= "FROM DST ";
-      $query .= "WHERE DST.drug_abrv=\"";
-      $query .= $_POST['drug_abrv'];
-      $query .= "\") GROUP BY R_S, isolate;";
-      }
-   elseif (!(isset($_POST['phenotype'])))
-     {
-      $query = "SELECT isolate, R_S ";
-      $query .= "FROM resistance_profile R ";
-      $query .= "WHERE R.drug_id IN (SELECT drug_id ";
-      $query .= "FROM DST ";
-      $query .= "WHERE DST.drug_abrv=\"";
-      $query .= $_POST['drug_abrv'];
-      $query .= "\") GROUP BY R_S, isolate;";
-      }
-}
-
+      $query .= "GROUP BY drug_abrv, full_name;";
       $result = mysqli_query($connection, $query); //Create mysql resource result set -a collection of database rows - to catch output of query
   //Test if there was a query error
       if (!$result) {
         die("Database  query failed.");
       }
 ?>
-    <b>Isolates involved in </b> <?php echo "<b>"; echo $_POST['drug_abrv']; echo "</b>"; ?> <b> resistance are listed below:</b>
+    <b>Concordance of TB drug names and abbreviations currently available in our database: </b>
 <ul>
 <?php      
       //3. Use returned data (if any) with while loop over any rows returned
@@ -75,9 +42,9 @@ if (isset($_POST['drug_abrv']))
 //	var_dump($variant); //dumps variant info to screen
     ?>
       <!--Creates list items in html as bullet points in browser-->
-      <li><?php echo $variant["isolate"];  
-                echo ", ";
-                echo $variant["R_S"]; ?></li>
+      <li><?php echo $variant["drug_abrv"];  
+                echo ": ";
+                echo $variant["full_name"]; ?></li>
     <?php
       }
     ?>

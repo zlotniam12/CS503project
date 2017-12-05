@@ -41,15 +41,39 @@
     <b>Search for isolates resistant/susceptible to a particular drug: </b>
     <br><i>Input drug name abbreviation in the box below: </i></br>
     <form name="form" action="" method="post">
-    <input type= "checkbox" name="phenotype" value="1"/>panS <br/>
+    <input type= "checkbox" name="phenotype" value="1"/>susceptible only<br/>
     <input type= "checkbox" name="phenotype" value="2"/>mono <br/>
     <input type="text" name="drug_abrv" id="drug_abrv" value="">
     <button type="submit" name="submit">SUBMIT</button>
     </form>
     
     <?php
+
 if (isset($_POST['drug_abrv']))
 {
+  if ($_POST['phenotype'] == "2")
+     {
+      $query = "SELECT isolate, R_S ";
+      $query .= "FROM resistance_profile R ";
+      $query .= "WHERE R.drug_id NOT IN (SELECT drug_id ";
+      $query .= "FROM DST ";
+      $query .= "WHERE DST.drug_abrv<>\"";
+      $query .= $_POST['drug_abrv'];
+      $query .= "\") GROUP BY R_S, isolate;";
+      }
+  elseif ($_POST['phenotype'] == "1")
+     {
+      $query = "SELECT isolate, R_S ";
+      $query .= "FROM resistance_profile R ";
+      $query .= "WHERE R.R_S = \"S\" "; 
+      $query .= "AND R.drug_id IN (SELECT drug_id ";
+      $query .= "FROM DST ";
+      $query .= "WHERE DST.drug_abrv=\"";
+      $query .= $_POST['drug_abrv'];
+      $query .= "\") GROUP BY R_S, isolate;";
+      }
+   elseif (!(isset($_POST['phenotype'])))
+     {
       $query = "SELECT isolate, R_S ";
       $query .= "FROM resistance_profile R ";
       $query .= "WHERE R.drug_id IN (SELECT drug_id ";
@@ -57,7 +81,9 @@ if (isset($_POST['drug_abrv']))
       $query .= "WHERE DST.drug_abrv=\"";
       $query .= $_POST['drug_abrv'];
       $query .= "\") GROUP BY R_S, isolate;";
+      }
 }
+
       $result = mysqli_query($connection, $query); //Create mysql resource result set -a collection of database rows - to catch output of query
   //Test if there was a query error
       if (!$result) {
