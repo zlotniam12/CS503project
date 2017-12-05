@@ -3,7 +3,7 @@
   $dbhost = "localhost"; //Can be IP address, domain
   $dbuser = "root"; //User we are logging in as, you need to configure this in MySQL prior
   $dbpass = ""; //Configure in MySQL prior
-  $dbname = "mtb_variants"; //
+  $dbname = "MTB_variants"; //
   $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname); //Handle for connection to DB
   // Test DB connection:
   if(mysqli_connect_errno()) {
