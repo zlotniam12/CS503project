@@ -21,13 +21,15 @@
   $start_position = isset($_POST['start_range']) ? $_POST['start_range'] : false;
   $end_position = isset($_POST['end_range']) ? $_POST['end_range'] : false;
   $query = "SELECT * ";
-  $query .= "FROM variants_table ";
+  $query .= "FROM variants ";
   $query .= "WHERE ";
-  $query .= "Position>=";
+  $query .= "position>=";
   $query .= $start_position;
-  $query .= " AND Position<=";
+  $query .= " AND position<=";
   $query .= $end_position;
   $query .= ";";
+  
+  echo $query;
   $result = mysqli_query($connection, $query); //Create mysql resource result set -a collection of database rows - to catch output of query
   
   //Test if there was a query error
@@ -41,6 +43,17 @@
 	<head></head>
 	<body>
 		<h1><font color="blue">Variant entries between positions: <?php echo $start_position?> and <?php echo $end_position?></font></h1>
+		
+		<div>
+			<font size="5">Highlight by variant classification:</font>
+			<form method="POST" onsubmit"this.submit(); this.reset(); return false;">
+				<input type="checkbox" onclick="var my_x=5; selectifOther();"/><font size="4">SNVs</font>
+				<input type="checkbox"/><font size="4">deletions</font>
+				<input type="checkbox"/><font size="4">insertions</font>
+				<input type="submit" value="SUBMIT"/>
+			</form>
+		</div>
+		
 		<!--Create an html table object with the output-->
 		<div class="section">
 			<table border="1">
@@ -53,6 +66,7 @@
 					<th bgcolor="red"><font color="green">Consequence:</font></th>
 					<th bgcolor="pink"><font color="purple">Impact:</font></th>
 					<th bgcolor="white">Gene:</th>
+					<th bgcolor="grey"><font color="white">Variant class:</font></th>
 				</tr>
 		<?php
 			//3. Use returned data (if any) with while loop over any rows returned
@@ -61,12 +75,13 @@
 			<!--tr=Create a row in html-->
 			<tr>
 				<td><?php echo $variant["variant_id"];?></td>
-				<td><?php echo $variant["Position"];?></td>
-				<td><?php echo $variant["Ref"];?></td>
-				<td><?php echo $variant["Alt"];?></td>
-				<td><?php echo $variant["Consequence"]; ?></td>
-				<td><?php echo $variant["Impact"];?></td>
-				<td><?php echo $variant["Gene"]?></td>
+				<td><?php echo $variant["position"];?></td>
+				<td><?php echo $variant["ref"];?></td>
+				<td><?php echo $variant["alt"];?></td>
+				<td><?php echo $variant["consequence"]; ?></td>
+				<td><?php echo $variant["impact"];?></td>
+				<td><?php echo $variant["gene"]?></td>
+				<td><?php echo $variant["variant_class"]?></td>
 			</tr>	
 		<?php
 			}
@@ -76,6 +91,18 @@
 		</div>
 	</body>
   </html>
+  
+  <script>
+	function checkifOther(){
+		if(my_x == 5) {
+				echo 'Success'
+		}
+		
+		else {
+				echo 'fail'
+		}
+	}
+  </script>
   
 <?php
   //4. Release returned data/resources

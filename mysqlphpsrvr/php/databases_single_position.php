@@ -20,12 +20,13 @@
   //Assemble query, parse user input and assign value to input_position with ternary operator
   $input_position = isset($_POST['single_position']) ? $_POST['single_position'] : false;
   $query = "SELECT * ";
-  $query .= "FROM variants_table ";
+  $query .= "FROM variants ";
   $query .= "WHERE ";
-  $query .= "Position=";
+  $query .= "position=";
   $query .= $input_position;
   $result = mysqli_query($connection, $query); //Create mysql resource result set -a collection of database rows - to catch output of query
   
+  echo $query
   //Test if there was a query error
   if (!$result) {
     die("Database  query failed.");
@@ -57,12 +58,12 @@
 			<!--tr=Create a row in html-->
 			<tr>
 				<td><?php echo $variant["variant_id"];?></td>
-				<td><?php echo $variant["Position"];?></td>
-				<td><?php echo $variant["Ref"];?></td>
-				<td><?php echo $variant["Alt"];?></td>
-				<td><?php echo $variant["Consequence"]; ?></td>
-				<td><?php echo $variant["Impact"];?></td>
-				<td><?php echo $variant["Gene"]?></td>
+				<td><?php echo $variant["position"];?></td>
+				<td><?php echo $variant["ref"];?></td>
+				<td><?php echo $variant["alt"];?></td>
+				<td><?php echo $variant["consequence"]; ?></td>
+				<td><?php echo $variant["impact"];?></td>
+				<td><?php echo $variant["gene"]?></td>
 			</tr>	
 		<?php
 			}
