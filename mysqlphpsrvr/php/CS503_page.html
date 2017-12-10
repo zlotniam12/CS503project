@@ -37,14 +37,16 @@
 				<a href="https://www.cdc.gov/tb/topic/drtb/default.htm" target="_blank">More information about drug resistant TB.</a></br><br>
 				<a href="http://www.informit.com/articles/article.aspx?p=1731108&seqNum=4" target="_blank">Something cool to click on.</a></br>
 				<form name="form" method="POST" action="drug_query.php" target="_blank" onsubmit="this.submit(); this.reset(); return false;">
-					<b>Search for isolates resistant/susceptible to a particular drug: </b><br/>
-					<input type= "checkbox" name="phenotype" value="1"/>R <br/>
-					<input type= "checkbox" name="phenotype" value="3"/>S <br/>
-					<input type= "checkbox" name="phenotype" value="2"/>mono <br/>
+				  <b>Search for isolates resistant/susceptible to a particular drug: </b>
+				  Default search is for both resistant and susceptible isolates.<br/>
+					<input type= "checkbox" name="phenotype" value="1"/>resistant <br/>
+					<input type= "checkbox" name="phenotype" value="3"/>susceptible <br/>
+					<input type= "checkbox" name="phenotype" value="2"/>mono resistant/suscpetible <br/>
 					<br><i>Input drug name abbreviation in the box below: </i></br>
 					<input type="text" name="drug_abrv" id="drug_abrv" value="">
 					<button type="submit" name="submit">SUBMIT</button>
 				</form>
+				<a href="update_drug.php" target="_blank">Click here to modify the DST profiles catalogued in our database.</a></br>
 			</p>
 			<!--<img src="tb.jpg" height="100px" width="150px" border="1px" alt=""/> -->
 		</div>
