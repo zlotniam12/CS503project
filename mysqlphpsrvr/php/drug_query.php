@@ -1,4 +1,5 @@
 <?php 
+  //Author: Alyssa Zlotnicki
   //1. Create a database connection (Note: had to already create DB from MySQL)
   $dbhost = "localhost"; //Can be IP address, domain
   $dbuser = "root"; //User we are logging in as, you need to configure this in MySQL prior
@@ -20,44 +21,89 @@
 
 <html lang="en">
   <head>
-    <title>Databases</title>
+    <title>Isolate Search</title>
   </head>
 <body>
 <?php
 
 if (isset($_POST['drug_abrv']))
 {
-  if ($_POST['phenotype'] == "2")
+  if ($_POST['phenotype'] == "1")
      {
-      $query = "SELECT isolate, R_S ";
-      $query .= "FROM resistance_profile R ";
-      $query .= "WHERE R.drug_id NOT IN (SELECT drug_id ";
-      $query .= "FROM DST ";
-      $query .= "WHERE DST.drug_abrv<>\"";
-      $query .= $_POST['drug_abrv'];
-      $query .= "\") GROUP BY R_S, isolate;";
-      }
-  elseif ($_POST['phenotype'] == "1")
+     if (isset($_POST['ismono']))
+	     {
+	      $query = "SELECT isolate, R_S ";
+	      $query .= "FROM resistance_profile R ";
+	      $query .= "WHERE LOCATE(\"R\", R.R_S) > 0 AND R.drug_id NOT IN (SELECT drug_id ";
+	      $query .= "FROM DST ";
+	      $query .= "WHERE DST.drug_abrv<>\"";
+	      $query .= $_POST['drug_abrv'];
+	      $query .= "\") AND isolate IN "; 
+              $query .= "(SELECT isolate FROM resistance_profile "; 
+              $query .= "GROUP BY isolate HAVING (COUNT(isolate) = 1));";
+	      }
+     else
+	     {
+	      $query = "SELECT isolate, R_S ";
+	      $query .= "FROM resistance_profile R ";
+	      $query .= "WHERE LOCATE(\"R\", R.R_S) > 0 AND R.drug_id IN (SELECT drug_id ";
+	      $query .= "FROM DST ";
+	      $query .= "WHERE DST.drug_abrv=\"";
+	      $query .= $_POST['drug_abrv'];
+	      $query .= "\") GROUP BY R_S, isolate;";
+	     }
+     }
+  elseif ($_POST['phenotype'] == "2")
      {
-      $query = "SELECT isolate, R_S ";
-      $query .= "FROM resistance_profile R ";
-      $query .= "WHERE R.R_S = \"S\" "; 
-      $query .= "AND R.drug_id IN (SELECT drug_id ";
-      $query .= "FROM DST ";
-      $query .= "WHERE DST.drug_abrv=\"";
-      $query .= $_POST['drug_abrv'];
-      $query .= "\") GROUP BY R_S, isolate;";
+     if (isset($_POST['ismono']))
+	      {
+	      $query = "SELECT isolate, R_S ";
+	      $query .= "FROM resistance_profile R ";
+	      $query .= "WHERE LOCATE(\"S\", R_S) > 0 AND R.drug_id NOT IN (SELECT drug_id ";
+	      $query .= "FROM DST ";
+	      $query .= "WHERE DST.drug_abrv<>\"";
+	      $query .= $_POST['drug_abrv'];
+	      $query .= "\") AND isolate IN "; 
+              $query .= "(SELECT isolate FROM resistance_profile R "; 
+              $query .= "GROUP BY isolate HAVING (COUNT(isolate) = 1));";
+	      }
+     else
+	     {
+	      $query = "SELECT isolate, R_S ";
+	      $query .= "FROM resistance_profile R ";
+	      $query .= "WHERE LOCATE(\"S\", R.R_S) > 0 "; 
+	      $query .= "AND R.drug_id NOT IN (SELECT drug_id ";
+	      $query .= "FROM DST ";
+	      $query .= "WHERE DST.drug_abrv<>\"";
+	      $query .= $_POST['drug_abrv'];
+	      $query .= "\") GROUP BY R_S, isolate;";
+	     }
       }
    elseif (!(isset($_POST['phenotype'])))
-     {
-      $query = "SELECT isolate, R_S ";
-      $query .= "FROM resistance_profile R ";
-      $query .= "WHERE R.drug_id IN (SELECT drug_id ";
-      $query .= "FROM DST ";
-      $query .= "WHERE DST.drug_abrv=\"";
-      $query .= $_POST['drug_abrv'];
-      $query .= "\") GROUP BY R_S, isolate;";
-      }
+      {
+      if (isset($_POST['ismono']))
+	      {
+	      $query = "SELECT isolate, R_S ";
+	      $query .= "FROM resistance_profile R ";
+	      $query .= "WHERE R.drug_id IN (SELECT drug_id ";
+	      $query .= "FROM DST ";
+	      $query .= "WHERE DST.drug_abrv=\"";
+	      $query .= $_POST['drug_abrv'];
+	      $query .= "\") AND ISOLATE IN";
+	      $query .= "(SELECT isolate FROM resistance_profile R GROUP BY isolate ";
+	      $query .= "HAVING (COUNT(isolate) = 1));";
+	      }
+      else
+	      {
+	      $query = "SELECT isolate, R_S ";
+	      $query .= "FROM resistance_profile R ";
+	      $query .= "WHERE R.drug_id IN (SELECT drug_id ";
+	      $query .= "FROM DST ";
+	      $query .= "WHERE DST.drug_abrv=\"";
+	      $query .= $_POST['drug_abrv'];
+	      $query .= "\");";
+	      }
+       }
 }
 
       $result = mysqli_query($connection, $query); //Create mysql resource result set -a collection of database rows - to catch output of query
@@ -76,7 +122,7 @@ if (isset($_POST['drug_abrv']))
     ?>
       <!--Creates list items in html as bullet points in browser-->
       <li><?php echo $variant["isolate"];  
-                echo ", ";
+                echo " | ";
                 echo $variant["R_S"]; ?></li>
     <?php
       }

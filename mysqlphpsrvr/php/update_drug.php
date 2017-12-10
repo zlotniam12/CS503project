@@ -1,4 +1,5 @@
-<?php 
+<?php
+//Author: Alyssa Zlotnicki
   //1. Create a database connection (Note: had to already create DB from MySQL)
   $dbhost = "localhost"; //Can be IP address, domain
   $dbuser = "root"; //User we are logging in as, you need to configure this in MySQL prior
@@ -20,11 +21,11 @@
 
 <html lang="en">
   <head>
-    <title>Databases</title>
+    <title>Drug Input</title>
   </head>
 <body>
 <a href="CS503_page.html" target="_blank">Click here to return to the database mainpage.</a><br>
-<br/><b>Input a new drug and its abbreviation into the TB database: </b>
+<br/><b>Input a new drug and its abbreviation into the database: </b>
     <br><i>Input drug name abbreviation in the box below: </i></br>
     <form name="form" action="" method="post">
     <input type="text" name="drug_abrv" id="drug_abrv" value="">
