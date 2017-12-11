@@ -11,22 +11,13 @@
 	<body bgcolor="#FFFFFF">
 		<!--Tal's section-->
 		<div class="section" style="max-height: 400px; overflow-y:scroll; overflow-x: hidden" id="div1"> 
-			<h1><span style="color:purple"> Tal's Section </span></h1>
+			<h1><span style="color:purple">Search for resistant and susceptible isolates </span></h1>
 			<p align="right-side">
-				<a href="https://en.wikipedia.org/wiki/Variant_Call_Format" target="_blank">More info on mutations</a>
-				<form method="POST" action="process.php" target="_blank" onsubmit="this.submit(); this.reset(); return false;">
-					<label for='formDrugResistance[]' ><i> Select the kind of drug resistance: </i></label><br>
-					<select name= 'Drug'>
-						<option value = ""> Select...</option>
-						<option value = "full_name"> full_name</option>
-						<option value = "drug_id"> drug_id</option>
-						<option value = "drug_abrv"> drug_abrv</option>
-					</select>
-				<input type= "submit" value = "Submit the form"/>
-				</form>
+			<a href="insert.php" target="_blank">Click here to add a variant into our database.</a></br>
+			<a href="delete.php" target="_blank">Click here to remove a variant from our database.</a></br>
 			</p>
-			<img src="tb.jpg" height="100px" width="200px" border="1px" alt=""/>
-			<div style="clear:both"></div>
+			<img src="dna.gif" height="200px" width="300px" border="1px" alt=""/>
+			<!--<div style="clear:both"></div> -->
 		</div>
 		
 		<!--Alyssa's section-->
@@ -60,14 +51,16 @@
 				<form method="POST" action="process.php" target="_blank">
 					<label for='formDrugResistance[]' ><i> Select the kind of drug resistance: </i></label><br>
 					<select name= 'Drug'>
-						<option value = ""> Select...</option>
-						<option value = "full_name"> full_name</option>
-						<option value = "drug_id"> drug_id</option>
-						<option value = "drug_abrv"> drug_abrv</option>
+					  <option value = ""> Select...</option>
+					  		<option value = "MDR">Multi Drug Resistance</option>
+ 						<option value = "XDR">Extensively Drug Resistance</option>
+ 						<option value = "panS">Susceptible to All drugs</option>
+ 						<option value = "R">All Resistant Isolates</option>
+ 						<option value = "S">All Susceptible Isolates</option>
 					</select>
 				<input type= "submit" value = "Submit the form"/>
 				</form>
-				<img src="dog.jpg" height="150px" width="150px" border="1px" alt=""/ align="right">
+					<img src="tb.jpg" height="200px" width="400px" border="1px" alt=""/ align="right">
 			</p>
 		</div>
 		
