@@ -24,6 +24,7 @@
     <title>Isolate Search</title>
   </head>
 <body>
+<a href="CS503_page.html" target="_blank">Click here to return to the database mainpage.</a><br><br/>
 <?php
 
 if (isset($_POST['drug_abrv']))
