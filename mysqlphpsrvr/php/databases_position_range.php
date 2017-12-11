@@ -29,7 +29,6 @@
   $query .= $end_position;
   $query .= ";";
   
-  echo $query;
   $result = mysqli_query($connection, $query); //Create mysql resource result set -a collection of database rows - to catch output of query
   
   //Test if there was a query error
@@ -43,16 +42,6 @@
 	<head></head>
 	<body>
 		<h1><font color="blue">Variant entries between positions: <?php echo $start_position?> and <?php echo $end_position?></font></h1>
-		
-		<div>
-			<font size="5">Highlight by variant classification:</font>
-			<form method="POST" onsubmit"this.submit(); this.reset(); return false;">
-				<input type="checkbox" onclick="var my_x=5; selectifOther();"/><font size="4">SNVs</font>
-				<input type="checkbox"/><font size="4">deletions</font>
-				<input type="checkbox"/><font size="4">insertions</font>
-				<input type="submit" value="SUBMIT"/>
-			</form>
-		</div>
 		
 		<!--Create an html table object with the output-->
 		<div class="section">
@@ -92,17 +81,7 @@
 	</body>
   </html>
   
-  <script>
-	function checkifOther(){
-		if(my_x == 5) {
-				echo 'Success'
-		}
-		
-		else {
-				echo 'fail'
-		}
-	}
-  </script>
+
   
 <?php
   //4. Release returned data/resources

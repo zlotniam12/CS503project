@@ -67,17 +67,17 @@
 		<!--Kellie's section-->
 		<div style="max-height: 400px; overflow-y:scroll; overflow-x: hidden" id="div4"> 
 			<!--attributes such as style can be used to add css elements-->
-			<h1><span style="color:green"> Kellie's Section </span></h1>
+			<h1><span style="color:green">  </span></h1>
 			<p align="left-side">
 				<a href="https://en.wikipedia.org/wiki/Variant_Call_Format" target="_blank"><font color="white">More info on mutations</font></a>
 				<!--The <form> element is used to collect information from the user-->
 				<!--The method attribute specifies the HTTP method (GET or POST) to be used when forms are submitted-->
 				<!--Setting method as GET will make the form data visible in the page address-->
 				<!--Use POST if the form is updating data or includes sensitive information; This has better security
-					since the submitted data is not visible in the page address-->
+				    since the submitted data is not visible in the page address-->
 				<form method="POST" action="databases_single_position.php" target="_blank" onsubmit="this.submit(); this.reset(); return false;">
-					<font color="white"><i>Input a single mutation position to search the database for:</i></font><br>
-					<input name="single_position" Placeholder="Single Position" type="text" required/><br/>
+				        <font color="white"><i>Input a single mutation position to search the database for:</i></font><br>
+				  	<input name="single_position" Placeholder="Single Position" type="number" min="1" step="1" required/><br/>
 					<input type="submit" value="Submit"/><br/>
 				</form>
 			</p>
@@ -86,11 +86,13 @@
 				<form method="POST" action="databases_position_range.php" target="_blank" onsubmit="this.submit(); this.reset(); return false;">
 					<font color="white"><i>Input a start and end range to search the database for:</i></font><br>
 					<!--required mark indicates to the web browser that both fields are mandatory-->
-					<input name="start_range" Placeholder="Start Range" type="text" required/><br/>
-					<input name="end_range" Placeholder="End Range" type="text" required/><br/>
+					<!--min mark indicates position must be a minimum of 1-->
+ 					<!--step mark indicates position must be an integer-->
+ 					<input name="start_range" Placeholder="Start Range" type="number" min="1" step="1" required/><br/>
+ 					<input name="end_range" Placeholder="End Range" type="number" min="1" step="1" required/><br/>
 					<input type= "submit" value="Submit"/>
 				</form>
-				<img src="dog.jpg" height="150px" width="150px" border="1px" alt=""/ align="right">
+ 				<img src="dna.jpg" height="150px" width="300px" border="1px" alt=""/ align="right">
 			</p>
 		</div>
 		

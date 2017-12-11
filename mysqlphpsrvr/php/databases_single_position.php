@@ -24,9 +24,8 @@
   $query .= "WHERE ";
   $query .= "position=";
   $query .= $input_position;
-  $query .= ";";
   $result = mysqli_query($connection, $query); //Create mysql resource result set -a collection of database rows - to catch output of query
-  
+
   //Test if there was a query error
   if (!$result) {
     die("Database  query failed.");
